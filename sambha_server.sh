@@ -27,6 +27,7 @@ EOT"
 #	Now that we have our new share configured, save it and restart Samba for it to take effect:
 
 sudo service smbd restart
+# Starting with 15.04 and systemd, the command is systemctl restart smbd
 
 # post restart use below command manually from the command line 
 
