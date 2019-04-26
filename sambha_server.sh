@@ -2,6 +2,7 @@
 sudo apt-get update
 sudo apt install -y samba samba-common-bin
 sudo smbstatus
+# or systemctl status smbd
 smbd --version
 #Now that Samba is installed, we need to create a directory for it to share
 mkdir /home/$USER/sambashare/
@@ -26,7 +27,8 @@ EOT"
 #	browsable: When set to yes, file managers such as Ubuntu's default file manager will list this share under "Network" (it could also appear as browseable).
 #	Now that we have our new share configured, save it and restart Samba for it to take effect:
 
-sudo service smbd restart
+sudo systemctl restart smbd
+
 # Starting with 15.04 and systemd, the command is systemctl restart smbd
 
 # post restart use below command manually from the command line 
