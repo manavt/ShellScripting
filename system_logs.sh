@@ -2,7 +2,8 @@
 # write into system logs
 message="Hello guys, Hows machine doing todayyyyyyyyxyz"
 # The logger utility allows you to quickly write a message to your system log with a single, simple command. 
-logger $message
+# Logger makes entries in the system log, The logger utility exits 0 on success, and >0 if an error occurs.
+logger $message if [ -z "$message" ]
 read_log=`cat /var/log/syslog | egrep -oh "$message"`
 if test "$message" = "$read_log"
 then

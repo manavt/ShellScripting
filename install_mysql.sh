@@ -31,7 +31,7 @@ fi
 #note 
 # is you see below exception check whether mysql is running or not
 # ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
-
+##
 
 # if you see below issues , it mean apt-get is getting used by some other service so wait for sometime until then its finishes its job or kill it 
 

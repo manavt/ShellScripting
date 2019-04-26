@@ -28,6 +28,7 @@ EOT"
 #	Now that we have our new share configured, save it and restart Samba for it to take effect:
 
 sudo systemctl restart smbd
+sudo systemctl enable smb
 
 # Starting with 15.04 and systemd, the command is systemctl restart smbd
 
